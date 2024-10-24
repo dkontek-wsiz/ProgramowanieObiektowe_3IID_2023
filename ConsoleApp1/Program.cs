@@ -4,9 +4,17 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Podaj liczbę");
+            var input = Console.ReadLine();
 
+            Console.WriteLine(IsEven(int.Parse(input)) ? "Parzysta" : "Nieparzysta");
+           
+        }
+
+
+        static bool IsEven(int input)
+        {
+            return input % 2 == 0;
         }
 
 
