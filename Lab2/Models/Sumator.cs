@@ -24,4 +24,4 @@ namespace Lab2.Models
         }
     }
 }
-}
+

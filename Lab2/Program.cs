@@ -12,3 +12,10 @@ Age = 30
 //o2.Age = 30;
 
 o.Welcome();
+
+var sum = new Sumator();
+
+Console.WriteLine(sum.Count());
+Console.WriteLine(sum.SumDiv3());
+Console.WriteLine(sum.Sum());
+sum.Display(1, 2);
