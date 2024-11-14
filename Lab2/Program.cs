@@ -5,4 +5,10 @@ Console.WriteLine("Hello, World!");
 
 Person o = new Person("Testy");
 
+var o2 = new Person("TS") {
+Age = 30
+};
+
+//o2.Age = 30;
+
 o.Welcome();
