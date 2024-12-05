@@ -6,4 +6,9 @@ namespace Lab2.Interfaces
     {
 
     }
+
+    public interface IPersonRepository : IBaseRepository<Person, int>
+    {
+
+    }
 }
