@@ -19,7 +19,7 @@ Console.WriteLine(sum.Count());
 Console.WriteLine(sum.SumDiv3());
 Console.WriteLine(sum.Sum());
 sum.Display(1, 2);*/
-
+/*
 using Lab2.Models;
 
 Shape rec = new Rectangle();
@@ -36,4 +36,24 @@ var shapes = new List<Shape>()
 foreach (var shape in shapes)
 {
     shape.Draw();
+}*/
+
+
+using Lab2.Lab5;
+
+//Obsługa wyjątku
+try
+{
+
+    Shape shape = new Square() { X = 5 };
+
+    shape.CalulateArea();
+}
+catch (NotImplementedException ex) //"Łapanie" wyjątków not implemented
+{
+    Console.WriteLine(ex.Message);
+}
+catch (Exception ex) //"Łapanie" wyjątków
+{
+    Console.WriteLine(ex.Message);
 }
