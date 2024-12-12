@@ -4,11 +4,7 @@ namespace Lab2.Interfaces
 {
     public interface IBookRepository: IBaseRepository<Book, long>
     {
-
-    }
-
-    public interface IPersonRepository : IBaseRepository<Person, int>
-    {
-
+        List<Book> GetBooksByAuthor(string author);
+        List<Book> GetBooksByPublishYear(int year);
     }
 }
