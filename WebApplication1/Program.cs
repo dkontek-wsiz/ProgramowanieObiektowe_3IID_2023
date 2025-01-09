@@ -1,5 +1,6 @@
 using Lab2.Interfaces;
 using Lab2.Lab6;
+using WebApplication1.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,8 +11,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 //#if DEBUG
-builder.Services.AddScoped<IBookRepository, BookRepository>();
-builder.Services.AddScoped<IPersonRepository, PersonRepository>();
+builder.Services.AddScoped<IBookRepository, FileBookRepository>();
+builder.Services.AddScoped<IPersonRepository, FilePersonRepository>();
 /*#else
 builder.Services.AddScoped<IBookRepository, BookRepository>();
 #endif*/
