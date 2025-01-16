@@ -1,11 +1,11 @@
 ﻿using Lab2.Interfaces;
 using Lab2.Lab6;
+using WebApplication1.Context;
 
 namespace WebApplication1.Repositories
 {
-    public class ADONETPeronRepository(IConfiguration configuration) : IPersonRepository
+    public class EFPeronRepository(LibraryDbContext context) : IPersonRepository
     {
-        private readonly string _conectionString = configuration.GetConnectionString("DefaultConnection");
         public void BorrowBook(int id, Book book)
         {
             throw new NotImplementedException();
@@ -13,7 +13,8 @@ namespace WebApplication1.Repositories
 
         public void Create(Person entity)
         {
-            throw new NotImplementedException();
+            context.Persons.Add(entity);
+            context.SaveChanges();
         }
 
         public void Delete(int id)

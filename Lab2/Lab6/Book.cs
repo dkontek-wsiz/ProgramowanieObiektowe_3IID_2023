@@ -9,5 +9,6 @@ namespace Lab2.Lab6
         public string Title { get; set; }
         public string Author { get; set; }
         public DateTime PublishDate { get; set; }
+        public DateTime PublishDaddte { get; set; }
     }
 }
